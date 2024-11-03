@@ -1,0 +1,18 @@
+/* CountryModal.css */
+.country-modal {
+  /* Optional styles for modal */
+}
+
+.modal-flag {
+  width: 100%;
+  height: auto;
+  border-radius: 8px; /* Optional styling for rounded corners */
+}
+
+.country-card {
+  transition: transform 0.2s; /* Smooth hover effect */
+}
+
+.country-card:hover {
+  transform: scale(1.05); /* Slightly enlarge card on hover */
+}

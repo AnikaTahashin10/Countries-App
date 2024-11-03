@@ -1,0 +1,38 @@
+.country-flag {
+    height: 200px;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+  }
+  
+  .country-flag:hover {
+    transform: scale(1.05);
+  }
+  
+  .card {
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+  }
+  
+  .card:hover {
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    transform: translateY(-5px);
+  }
+  
+  .card-title {
+    transition: color 0.3s ease;
+  }
+  
+  .card-title:hover {
+    color: #007bff;
+  }
+  
+  .modal-content {
+    border-radius: 0.5rem;
+  }
+  
+  .modal-header .close {
+    font-size: 1.5rem;
+  }
+  
+  .country-info {
+    font-size: 0.9rem;
+  }

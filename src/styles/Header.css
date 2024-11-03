@@ -1,0 +1,27 @@
+/* Header.css */
+.custom-navbar {
+  background-color: rgb(0, 0, 0); /* Keep it semi-transparent black */
+  transition: background-color 0.3s ease; /* Smooth transition */
+  position: sticky; /* Stick to the top on scroll */
+  top: 0; /* Stay at the top */
+  z-index: 1000; /* Ensure it stays above other elements */
+}
+
+.nav-link {
+  color: white; /* White text color for links */
+}
+
+.btn-login {
+  background-color: transparent; /* Transparent background */
+  border: 1px solid white; /* White border */
+  color: white; /* White text color */
+}
+
+.btn-register {
+  background-color: purple; /* Purple background */
+  color: white; /* White text color */
+}
+
+.btn-login:hover, .btn-register:hover {
+  opacity: 0.8; /* Slightly fade on hover */
+}
