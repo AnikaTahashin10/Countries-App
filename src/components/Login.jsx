@@ -1,7 +1,6 @@
-// src/routes/Login.jsx
 import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
-import { auth } from '../store/firebase'; // Import your Firebase configuration
+import { auth } from '../store/firebase'; 
 import { signInWithEmailAndPassword, createUserWithEmailAndPassword } from 'firebase/auth';
 import { setUser } from '../store/authSlice';
 import { Button, Form, Container, Alert } from 'react-bootstrap';
@@ -30,7 +29,7 @@ const Login = () => {
 
       const { uid, email: userEmail, displayName } = userCredential.user;
       dispatch(setUser({ uid, email: userEmail, displayName }));
-      navigate('/'); // Redirect to homepage after login
+      navigate('/'); 
     } catch (error) {
       setError(error.message);
     }

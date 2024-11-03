@@ -1,0 +1,48 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400&display=swap');
+
+
+.custom-navbar {
+  background-color: rgb(0, 0, 0);
+  transition: background-color 0.3s ease;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  font-family: 'Quicksand', serif; 
+}
+
+.brand-logo {
+  padding-left: 20px; 
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.nav-links {
+  display: flex;
+  justify-content: center;
+}
+
+.nav-link {
+  color: white;
+  font-family: 'Quicksand', serif; 
+  font-size: 1.2rem;
+  transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+  color: #00f2fe; 
+}
+
+.btn-login, .btn-register {
+  background-color: transparent;
+  border: 1px solid white;
+  color: white;
+  padding: 8px 16px;
+  font-size: 1rem;
+  font-family: 'Quicksand', sans-serif;
+  
+}
+
+.btn-login:hover, .btn-register:hover {
+  opacity: 0.8;
+  color: #00f2fe;
+}

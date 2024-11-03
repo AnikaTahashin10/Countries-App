@@ -8,13 +8,13 @@ import CountriesSingle from "./routes/CountriesSingle";
 import Favourites from "./routes/Favourites";
 import Home from "./routes/Home";
 import Root from "./routes/Root";
-import store from "./store/store";
 import { useEffect } from "react";
 import { useDispatch } from "react-redux";
-import { setUser, clearUser } from "./store/authSlice"; // Import necessary actions
+import { setUser, clearUser } from "./store/authSlice"; 
 import Login from "./components/Login";
 import { onAuthStateChanged } from "firebase/auth";
 import { auth } from "./store/firebase";
+import Register from "./components/Register";
 
 const theme = createTheme({
   palette: {
@@ -40,7 +40,7 @@ function App() {
       }
     });
 
-    return () => unsubscribe(); // Cleanup listener on component unmount
+    return () => unsubscribe(); 
   }, [dispatch]);
 
   const router = createBrowserRouter([
@@ -65,9 +65,11 @@ function App() {
           element: <Favourites />,
         },
         {
-          path: "/login", // Add the login route here
+          path: "/login", 
           element: <Login />,
         },
+        { path: "/register", 
+        element: <Register /> },
       ],
     },
   ]);

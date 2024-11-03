@@ -1,8 +1,9 @@
-import { Modal, Button, Row, Col } from "react-bootstrap"
-import { Globe2, Cash, People, Map, Clock } from "react-bootstrap-icons"
+import { Modal, Button, Row, Col } from "react-bootstrap";
+import { Globe2, Cash, People, Map, Clock } from "react-bootstrap-icons";
+import PropTypes from 'prop-types'; 
 
 export default function CountryModal({ show, handleClose, country }) {
-  if (!country) return null
+  if (!country) return null;
 
   return (
     <Modal show={show} onHide={handleClose} size="lg" centered>
@@ -57,8 +58,30 @@ export default function CountryModal({ show, handleClose, country }) {
         </Button>
       </Modal.Footer>
     </Modal>
-  )
+  );
 }
+
+CountryModal.propTypes = {
+  show: PropTypes.bool.isRequired,
+  handleClose: PropTypes.func.isRequired,
+  country: PropTypes.shape({
+    name: PropTypes.shape({
+      common: PropTypes.string.isRequired,
+      official: PropTypes.string.isRequired,
+    }).isRequired,
+    flags: PropTypes.shape({
+      svg: PropTypes.string.isRequired,
+    }).isRequired,
+    capital: PropTypes.arrayOf(PropTypes.string),
+    population: PropTypes.number.isRequired,
+    region: PropTypes.string.isRequired,
+    subregion: PropTypes.string,
+    area: PropTypes.number,
+    languages: PropTypes.object,
+    currencies: PropTypes.object,
+    timezones: PropTypes.arrayOf(PropTypes.string),
+  }),
+};
 
 function InfoItem({ icon, label, value }) {
   return (
@@ -68,5 +91,11 @@ function InfoItem({ icon, label, value }) {
         <strong>{label}:</strong> {value}
       </div>
     </div>
-  )
+  );
 }
+
+InfoItem.propTypes = {
+  icon: PropTypes.element.isRequired,
+  label: PropTypes.string.isRequired,
+  value: PropTypes.string.isRequired,
+};

@@ -6,7 +6,7 @@ import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import ListGroup from "react-bootstrap/ListGroup";
 import { fetchFavourites } from "../store/favouritesSlice";
-import './Favourites.css'; // Import your CSS file for styles
+import './Favourites.css';
 
 const Favourites = () => {
   const dispatch = useDispatch();
@@ -15,7 +15,7 @@ const Favourites = () => {
 
   useEffect(() => {
     if (user) {
-      dispatch(fetchFavourites(user.uid)); // Fetch favorites from Firestore
+      dispatch(fetchFavourites(user.uid)); // to fetch favorites from Firestore
     }
   }, [dispatch, user]);
 

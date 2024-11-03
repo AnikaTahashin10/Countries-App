@@ -1,12 +1,12 @@
 .home-container {
-    min-height: 100vh; /* Full viewport height */
+    min-height: 100vh; 
     display: flex;
     flex-direction: column;
     justify-content: center;
-    background: linear-gradient(to right, #4facfe, #00f2fe); /* Gradient background */
-    color: white; /* Text color */
-    padding: 2rem; /* Padding around the container */
-    text-align: center; /* Center the text */
+    background: linear-gradient(to right, #4facfe, #00f2fe);
+    color: white; 
+    padding: 2rem; 
+    text-align: center; 
   }
   
   h1 {
@@ -18,25 +18,25 @@
   }
   
   .btn-home {
-    padding: 10px 30px; /* Increase button padding */
-    font-size: 1.2rem; /* Larger font size */
-    border-radius: 30px; /* Round buttons */
-    transition: background-color 0.3s ease; /* Smooth background transition */
+    padding: 10px 30px; 
+    font-size: 1.2rem; 
+    border-radius: 30px; 
+    transition: background-color 0.3s ease; 
   }
   
   .btn-home:hover {
-    background-color: rgba(255, 255, 255, 0.8); /* Change button color on hover */
-    color: #000; /* Change text color on hover */
+    background-color: rgba(255, 255, 255, 0.8);
+    color: #000;
   }
   
   .loading {
     font-size: 1.5rem;
-    color: white; /* Loading text color */
+    color: white; 
     text-align: center;
   }
   
   .error {
     margin-top: 20px;
-    color: red; /* Error message color */
+    color: red;
   }
   

@@ -9,8 +9,8 @@ import Row from "react-bootstrap/Row";
 import { useDispatch, useSelector } from "react-redux";
 import { initializeCountries } from "../store/countriesSlice";
 import { addFavourite, removeFavourite, saveFavourites } from "../store/favouritesSlice";
-import CountryModal from "./CountriesSingle"; // Import the modal component
-import './Countries.css'; // Import your CSS file for styles
+import CountryModal from "./CountriesSingle"; 
+import './Countries.css';
 
 const Countries = () => {
   const dispatch = useDispatch();
@@ -21,7 +21,7 @@ const Countries = () => {
 
   const [favourited, setFavourited] = useState({});
   const [showModal, setShowModal] = useState(false);
-  const [selectedCountry, setSelectedCountry] = useState(null); // Track selected country
+  const [selectedCountry, setSelectedCountry] = useState(null); 
 
   useEffect(() => {
     dispatch(initializeCountries());
@@ -84,8 +84,8 @@ const Countries = () => {
   }
 
   return (
-    <Container fluid className="my-4"> {/* Add margins to the container */}
-      <h1 className="text-center mb-4">Countries of the World</h1> {/* Title for the page */}
+    <Container fluid className="my-4"> 
+      <h1 className="text-center mb-4">Countries of the World</h1> 
       <Row xs={1} md={2} lg={3} className="g-4">
         {sortedCountries.map((country) => (
           <Col key={country.name.official}>
@@ -106,7 +106,7 @@ const Countries = () => {
                 variant="top"
                 src={country.flags.svg}
                 className="country-flag"
-                onClick={() => handleShowModal(country)} // Open modal on click
+                onClick={() => handleShowModal(country)} 
               />
               <Card.Body className="d-flex flex-column">
                 <Card.Title className="country-title" onClick={() => handleShowModal(country)}>
@@ -135,7 +135,6 @@ const Countries = () => {
           </Col>
         ))}
       </Row>
-      {/* Modal for displaying country details */}
       <CountryModal show={showModal} handleClose={handleCloseModal} country={selectedCountry} />
     </Container>
   );

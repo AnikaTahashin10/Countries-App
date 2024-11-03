@@ -2,14 +2,14 @@ import React from 'react';
 import { useSelector } from 'react-redux';
 import { Button, Container, Row, Col } from 'react-bootstrap';
 import { useNavigate } from 'react-router-dom';
-import './Home.css'; // Import your custom CSS for styles
+import './Home.css'; 
 
 const Home = () => {
   const { user, loading, error } = useSelector((state) => state.auth);
   const navigate = useNavigate();
 
   if (loading) {
-    return <div className="loading">Loading...</div>; // Show loading state
+    return <div className="loading">Loading...</div>; 
   }
 
   return (
@@ -27,13 +27,13 @@ const Home = () => {
               View Countries
             </Button>
           ) : (
-            <Button variant="success" className="btn-home" onClick={() => navigate('/login')}>
-              Login
+            <Button variant="success" className="btn-home" onClick={() => navigate('/Register')}>
+              Register
             </Button>
           )}
         </Col>
       </Row>
-      {error && <div className="error">{error}</div>} {/* Display error if exists */}
+      {error && <div className="error">{error}</div>} 
     </Container>
   );
 };

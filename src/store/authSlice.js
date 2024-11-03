@@ -1,10 +1,9 @@
-// src/store/authSlice.js
 import { createSlice } from "@reduxjs/toolkit";
 import { onAuthStateChanged, signInWithEmailAndPassword, signOut } from "firebase/auth";
 import { auth } from "./firebase";
 
 const initialState = {
-  user: JSON.parse(localStorage.getItem("user")) || null, // Load user from localStorage if available
+  user: JSON.parse(localStorage.getItem("user")) || null, 
   loading: false,
   error: null,
 };
@@ -14,18 +13,18 @@ const authSlice = createSlice({
   initialState,
   reducers: {
     setUser(state, action) {
-      state.user = action.payload; // Set user information
-      localStorage.setItem("user", JSON.stringify(action.payload)); // Save user to localStorage
+      state.user = action.payload;
+      localStorage.setItem("user", JSON.stringify(action.payload)); 
     },
     clearUser(state) {
-      state.user = null; // Clear user information
-      localStorage.removeItem("user"); // Remove user from localStorage
+      state.user = null;
+      localStorage.removeItem("user");
     },
     setLoading(state, action) {
-      state.loading = action.payload; // Set loading state
+      state.loading = action.payload; 
     },
     setError(state, action) {
-      state.error = action.payload; // Set error state
+      state.error = action.payload; 
     },
   },
 });
